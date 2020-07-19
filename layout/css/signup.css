@@ -94,7 +94,6 @@
 
 /* start home page */
 .add-question{
-	background-color: #f6f6f6;
 	height: 165px;
 	padding: 20px;
 	margin-bottom: 15px;
@@ -127,7 +126,6 @@
 	color: #fff;
 }
 .showed-question{
-	background-color: #f6f6f6;
 	padding: 10px 10px 25px 10px;
 	border-radius: 10px;
 	overflow:hidden;
@@ -158,7 +156,6 @@
 }
 .showed-question .comments .add-comment .comment-content textarea{
 	margin: -5px 0 10px 0;
-	background-color: #d8d8d8;
 	opacity: 0.9;
 	border-radius: 10px;
 	resize: none;
@@ -184,7 +181,6 @@
 .showed-question .comments  .parent-users-comments p
 {
     width: calc(100% - 68px);
-    background-color: #d8d8d8;
 	padding: 10px 8px;
 	border-radius: 5px;
 	margin-left: 65px;
@@ -223,7 +219,6 @@
 .user-information{
 	border: 1px solid #b1b1b1;
 	padding: 10px;
-	background-color: #f6f6f6;
 	border-radius: 10px;
 }
 .user-information img{

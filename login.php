@@ -1,6 +1,7 @@
 <?php
     
     include 'includes/header.php';
+    include 'includes/navbar.php';
 
 ?>
     <!-- start form -->
@@ -31,7 +32,7 @@
                     <span class="asterisx">*</span>
                 </div>
                 <!-- end password field -->
-                <a href="#">Forget Password?</a>
+                <a href="signup.php" class="m-1 text-white"> Create new acounte ?</a>
 
                 <!-- start submit field -->
                 <input class="btn btn-success btn-block"  name="login" type="submit" value="LogIn" />

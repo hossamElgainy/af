@@ -8,9 +8,9 @@ if(!isset( $_SESSION )){
 
 
 //get user id
-if ( isset ( $_SESSION[ 'user_id' ] ) ){
+if ( isset ( $_SESSION[ 'af_user_id' ] ) ){
 	
-    $user_id = $_SESSION[ 'user_id' ];
+    $user_id = $_SESSION[ 'af_user_id' ];
 	
 }
 
@@ -24,7 +24,7 @@ if(isset( $user_id )){
     $user = $stmt->fetch();
     
 
-    $user_name =$user['name'] ;
+    @$user_name =$user['name'] ;
 
     if(isset($user['avatar'])){
       $user_avatar = $root .  "/uploads/avatars/"  . $user['avatar'] ;
@@ -108,7 +108,7 @@ if(isset($_POST['signup'])){
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['yourname' => $yourname , 'username' => $username ,'avatar' =>$avatar, 'email' => $email ,'phone' => $phone, 'password' => $password]);
         
-        $_SESSION[ 'user_id' ] = $pdo->lastInsertId();
+        $_SESSION[ 'af_user_id' ] = $pdo->lastInsertId();
         
   	     header('location: home.php');
   	     exit;
@@ -144,7 +144,7 @@ if(isset($_POST['signup'])){
  		      $stmt->execute([$email]);
  	      	$id = $stmt->fetch();
  		
-      	 $_SESSION['user_id'] = $id[0];
+      	 $_SESSION['af_user_id'] = $id[0];
   	    header('location: home.php');
   	    exit;
   	
